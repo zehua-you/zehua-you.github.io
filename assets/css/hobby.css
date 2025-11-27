@@ -1,0 +1,125 @@
+/* ===========================================
+   HOBBY PAGE BASE STYLING
+   =========================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #1f2937;
+  line-height: 1.65;
+  padding-bottom: 4rem;
+}
+
+/* ===========================================
+   NAVIGATION BAR (same vibe as main site)
+   =========================================== */
+
+.navigation-bar {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #f97316;       /* orange underline */
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ===========================================
+   MAIN WRAPPER
+   =========================================== */
+
+.main-content-wrapper {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ===========================================
+   INTRO SECTION
+   =========================================== */
+
+.intro-to-hobby {
+  font-size: 1.15rem;
+  color: #374151;
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+/* ===========================================
+   HOBBY CARDS
+   =========================================== */
+
+.section-card {
+  background: #f5f6fa;      /* soft light gray/blue */
+  border-radius: 6px;
+  padding: 1.6rem 1.8rem;
+  border-left: 4px solid #f97316; /* orange accent */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.section-card h2 {
+  font-family: "Georgia", serif;
+  font-size: 1.45rem;
+  margin-bottom: 0.6rem;
+  color: #14213d;           /* deep navy */
+}
+
+.section-card p {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+/* ===========================================
+   RESPONSIVE
+   =========================================== */
+
+@media (max-width: 600px) {
+  .main-content-wrapper {
+    padding: 0 1.4rem;
+    margin-top: 2.2rem;
+  }
+
+  .section-card {
+    padding: 1.4rem 1.3rem;
+  }
+}
