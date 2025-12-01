@@ -1,7 +1,14 @@
-/* ============================
-   BASE
-   ============================ */
+/* IMPORT VARIABLES FROM HOME PAGE */
+:root {
+  --navy: #14213d;
+  --navy-soft: #1f2937;
+  --orange: #f97316;
+  --bg: #f5f6fa;
+  --text-main: #111827;
+  --text-muted: #4b5563;
+}
 
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,20 +18,16 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: #ffffff;
-  color: #111827;
-  line-height: 1.6;
-  padding-bottom: 4rem;
+  color: var(--text-main);
+  line-height: 1.7; /* ✅ match home & experiences */
 }
 
-/* ============================
-   NAVBAR (match rest of site)
-   ============================ */
-
+/* NAVIGATION BAR (IDENTICAL TO HOME PAGE) */
 .navigation-bar {
   width: 100%;
   padding: 1rem 2rem;
   border-bottom: 1px solid #e5e7eb;
-  background: #ffffff;
+  background: white;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -42,17 +45,16 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   position: relative;
-  padding-bottom: 0.2rem;
 }
 
 .nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2px;
   width: 0;
   height: 2px;
-  background: #f97316; /* orange accent */
+  background: var(--orange);
   transition: width 0.2s ease;
 }
 
@@ -61,94 +63,124 @@ body {
   width: 100%;
 }
 
-/* ============================
-   PUBLICATIONS SECTION
-   ============================ */
+/* ===================== */
+/*   PUBLICATIONS PAGE   */
+/* ===================== */
 
 .publications-section {
-  max-width: 950px;
-  margin: 3rem auto;
+  max-width: 900px;
+  margin: 3rem auto 4rem;
   padding: 0 2rem;
 }
 
 .publications-header {
+  font-family: "Georgia", serif;
   font-size: 2rem;
-  font-family: "Georgia", "Times New Roman", serif;
-  margin-bottom: 1.5rem;
-  color: #14213d; /* deep navy */
+  color: var(--navy);
+  margin-top: 0;          /* optional: same as .experiences-header:first-of-type */
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-/* Optional subtitle if you add one later */
-.publications-subtitle {
-  font-size: 0.98rem;
-  color: #6b7280;
-  margin-bottom: 1.8rem;
-}
-
-/* ============================
-   PUBLICATION LIST
-   ============================ */
-
+/* LIST WRAPPER */
 .publications-list {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.8rem;
 }
 
-/* Each publication “card” */
-
+/* BLOCK CONTAINER */
 .publication-block {
-  padding: 1.2rem 1.4rem;
-  border-radius: 6px;
-  background: #f9fafb;
-  border-left: 4px solid #0ea5e9; /* soft blue accent */
-  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.05);
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 1.8rem;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 18px 40px rgba(15, 23, 42, 0.08);
 }
 
-/* Citation text */
-
-.citation {
-  font-size: 0.98rem;
-  color: #374151;
+/* LEFT SIDE: YEAR + VENUE */
+.left-block {
+  min-width: 140px;
+  max-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
 }
 
-/* Make article titles pop a bit if you wrapped them in <strong> */
-
-.citation strong {
+.publication-year {
   font-weight: 600;
-  color: #0f172a;
+  font-size: 1.05rem;
+  color: var(--navy);
 }
 
-/* Links: DOI / arXiv */
+.publication-venue {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.publication-type {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* RIGHT SIDE: CITATION */
+.right-block {
+  flex: 1;
+  font-size: 0.98rem;  /* ✅ same as project-description */
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.publication-title {
+  font-weight: 600;
+  color: var(--navy-soft);
+}
+
+/* ========================== */
+/*      LINK STYLE (DOI)      */
+/* ========================== */
 
 .citation a {
-  color: #0ea5e9;              /* teal-ish link like the screenshot */
+  font-weight: 600;
+  color: var(--orange);
   text-decoration: none;
-  word-break: break-all;
+  position: relative;
+  padding-bottom: 2px;
 }
 
-.citation a:hover {
-  text-decoration: underline;
+.citation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0%;
+  height: 2px;
+  background: var(--orange);
+  transition: width 0.25s ease;
 }
 
-/* Small note style if you add things like “under review” */
-
-.citation .status {
-  font-style: italic;
-  color: #6b7280;
+.citation a:hover::after {
+  width: 100%;
 }
 
-/* ============================
-   RESPONSIVE
-   ============================ */
+/* ========================== */
+/*         RESPONSIVE         */
+/* ========================== */
 
-@media (max-width: 640px) {
-  .publications-section {
-    padding: 0 1.4rem;
-    margin-top: 2.2rem;
+@media (max-width: 700px) {
+  .publication-block {
+    flex-direction: column;
   }
 
-  .publication-block {
-    padding: 1rem 1.1rem;
+  .left-block {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
   }
 }

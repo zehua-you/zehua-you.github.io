@@ -23,7 +23,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: #ffffff;
   color: var(--text-main);
-  line-height: 1.7;
+  line-height: 1.7; /* ✅ match home */
 }
 
 /* ========================================
@@ -79,12 +79,12 @@ body {
   padding: 0 2rem;
 }
 
-/* Section headings */
+/* Section headings – Georgia like home intro */
 
 .experiences-header,
 .internship-header,
 .start-ups-header {
-  font-family: "Georgia", serif;
+  font-family: "Georgia", serif;    /* ✅ same serif as home intro */
   font-size: 2rem;
   color: var(--navy);
   margin-top: 2rem;
@@ -119,7 +119,7 @@ body {
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
   padding: 1.8rem 2rem;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); /* text + big image */
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 2.2rem;
   align-items: center;
 }
@@ -195,7 +195,7 @@ body {
 }
 
 /* ========================================
-   VISUAL / CAROUSEL (IMPORTANT)
+   VISUAL / CAROUSEL
    ======================================== */
 
 .project-visuals {
@@ -203,7 +203,7 @@ body {
   width: 100%;
   max-width: 430px;
   margin: 0 auto;
-  z-index: 10; /* ensure arrows, wrapper stack above layout */
+  z-index: 10;
 }
 
 .image-carousel {
@@ -217,7 +217,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;   /* <-- image layer */
+  z-index: 1;
 }
 
 .image-carousel img {
@@ -231,7 +231,7 @@ body {
   display: block;
 }
 
-/* ARROWS (now properly above image) */
+/* ARROWS */
 
 .carousel-arrow {
   position: absolute;
@@ -250,7 +250,7 @@ body {
   font-size: 1.2rem;
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.5);
   transition: background 0.15s ease, transform 0.15s ease;
-  z-index: 5;  /* <-- FIXED: arrows always above the image */
+  z-index: 5;
 }
 
 .carousel-arrow-left {
