@@ -1,5 +1,18 @@
-/* ========= BASE ========= */
+/* ========================================
+   VARIABLES (match index)
+   ======================================== */
+:root {
+  --navy: #14213d;
+  --navy-soft: #1f2937;
+  --orange: #f97316;
+  --bg: #f5f6fa;
+  --text-main: #111827;
+  --text-muted: #4b5563;
+}
 
+/* ========================================
+   RESET
+   ======================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,18 +22,18 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: #ffffff;
-  color: #111827;
-  line-height: 1.6;
-  padding-bottom: 4rem;
+  color: var(--text-main);
+  line-height: 1.7;
 }
 
-/* ========= NAVBAR (match other pages) ========= */
-
+/* ========================================
+   NAVIGATION BAR (same as index)
+   ======================================== */
 .navigation-bar {
   width: 100%;
   padding: 1rem 2rem;
   border-bottom: 1px solid #e5e7eb;
-  background: #ffffff;
+  background: white;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -38,17 +51,16 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   position: relative;
-  padding-bottom: 0.2rem;
 }
 
 .nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2px;
   width: 0;
   height: 2px;
-  background: #f97316; /* orange accent */
+  background: #f97316; /* orange underline */
   transition: width 0.2s ease;
 }
 
@@ -57,88 +69,249 @@ body {
   width: 100%;
 }
 
-/* ========= EXPERIENCES SECTION ========= */
+/* ========================================
+   EXPERIENCES PAGE LAYOUT
+   ======================================== */
 
 .experiences-section {
-  max-width: 950px;
-  margin: 3rem auto;
+  max-width: 1100px;
+  margin: 3rem auto 4rem;
   padding: 0 2rem;
 }
 
-.experiences-header {
+/* Section headings */
+
+.experiences-header,
+.internship-header,
+.start-ups-header {
+  font-family: "Georgia", serif;
   font-size: 2rem;
-  font-family: "Georgia", "Times New Roman", serif;
-  margin-bottom: 1.8rem;
-  color: #14213d; /* deep navy */
+  color: var(--navy);
+  margin-top: 2rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.experiences {
+.experiences-header:first-of-type {
+  margin-top: 0;
+}
+
+.experiences,
+.internships,
+.start-ups {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+  margin-top: 1rem;
 }
 
-/* Each experience card */
+/* ========================================
+   EXPERIENCE / INTERNSHIP / STARTUP CARDS
+   ======================================== */
+
+.experience-block,
+.internship-block,
+.start-up-block {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  padding: 1.8rem 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); /* text + big image */
+  gap: 2.2rem;
+  align-items: center;
+}
+
+/* colored accent strip */
 
 .experience-block {
-  position: relative;
-  padding-left: 1.8rem;
+  border-left: 4px solid #0ea5e9;
 }
 
-/* Vertical timeline line */
-
-.experience-block::before {
-  content: "";
-  position: absolute;
-  left: 0.45rem;
-  top: 0.4rem;
-  bottom: -0.4rem;
-  width: 2px;
-  background: #e5e7eb;
+.internship-block {
+  border-left: 4px solid var(--orange);
 }
 
-/* Dot on timeline */
-
-.experience-block::after {
-  content: "";
-  position: absolute;
-  left: 0.25rem;
-  top: 0.4rem;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: #f97316;
+.start-up-block {
+  border-left: 4px solid #22c55e;
 }
 
-/* Card itself */
-
-.experience {
-  background: #f9fafb;
-  border-radius: 6px;
-  padding: 1.2rem 1.4rem;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
-  white-space: pre-line;  /* preserve your line breaks & bullets */
-  font-size: 0.98rem;
-  color: #374151;
+.left-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-/* Emphasize project titles if you later wrap them in <strong> or similar */
+.right-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.experience strong {
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+.experience-time,
+.internship-time,
+.start-up-time {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
   font-weight: 600;
-  color: #111827;
 }
 
-/* ========= RESPONSIVE ========= */
+.experience-location,
+.internship-location,
+.start-up-location {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy-soft);
+  margin-bottom: 0.2rem;
+}
 
-@media (max-width: 640px) {
-  .experiences-section {
-    padding: 0 1.3rem;
-    margin-top: 2.2rem;
+.project-title,
+.start-up-title {
+  font-size: 1.2rem;
+  font-weight: 650;
+  color: var(--navy);
+  margin-top: 0.15rem;
+}
+
+.project-supervisor {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ========================================
+   VISUAL / CAROUSEL (IMPORTANT)
+   ======================================== */
+
+.project-visuals {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  z-index: 10; /* ensure arrows, wrapper stack above layout */
+}
+
+.image-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #f5efe2;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;   /* <-- image layer */
+}
+
+.image-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.image-carousel img:first-child {
+  display: block;
+}
+
+/* ARROWS (now properly above image) */
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(15, 23, 42, 0.9);
+  color: #f9fafb;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.5);
+  transition: background 0.15s ease, transform 0.15s ease;
+  z-index: 5;  /* <-- FIXED: arrows always above the image */
+}
+
+.carousel-arrow-left {
+  left: 0.9rem;
+}
+
+.carousel-arrow-right {
+  right: 0.9rem;
+}
+
+.carousel-arrow:hover {
+  background: rgba(37, 99, 235, 0.96);
+  transform: translateY(-50%) translateY(-1px);
+}
+
+.carousel-arrow:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 900px) {
+  .experience-block,
+  .internship-block,
+  .start-up-block {
+    grid-template-columns: 1fr;
+    padding: 1.6rem;
   }
 
-  .experience {
-    padding: 1rem 1.1rem;
-    font-size: 0.96rem;
+  .right-block {
+    margin-top: 0.7rem;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .experiences-section {
+    padding: 0 1.2rem;
+  }
+
+  .experience-block,
+  .internship-block,
+  .start-up-block {
+    padding: 1.4rem 1.3rem;
+  }
+
+  .project-visuals {
+    max-width: 100%;
+  }
+
+  .image-carousel {
+    aspect-ratio: 16 / 11;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.2);
+  }
+
+  .carousel-arrow {
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 1.05rem;
   }
 }

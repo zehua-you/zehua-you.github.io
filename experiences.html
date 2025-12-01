@@ -4,113 +4,211 @@
     <meta charset="UTF-8" />
     <title>Experiences</title>
     <link rel="stylesheet" href="assets/css/experiences.css" />
+    <script src="assets/js/experiences.js" defer></script>
 </head>
 
 <body>
     <!-- NAVBAR -->
     <div class="navigation-bar">
         <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="hobby.html">Hobby</a>
-        <a href="experiences.html" class="active">Experiences</a>
-        <a href="publications.html">Publications</a>
-        <a href="assets/files/Zehua You CV.pdf" target="_blank">CV</a>
+            <a href="index.html">Home</a>
+            <a href="hobby.html">Hobby</a>
+            <a href="experiences.html" class="active">Experiences</a>
+            <a href="publications.html">Publications</a>
+            <a href="assets/files/Zehua You CV.pdf" target="_blank">CV</a>
         </nav>
     </div>
 
-    <div class = "experiences-section">
-        <div class = "experiences-header">
+    <div class="experiences-section">
+        <div class="experiences-header">
             Research Experiences
-        <div>
-        <div class = "experiences">
-            <div class = "experience-block">
-                <div class = "experience-time">
-                    
-                <div>
-                <div class = "experience-location">
-                    
-                <div>
-                <div class = "project-title">
-                    Deepfake Perception Analysis
-                </div>
-                <div class = "project-supervisor">
-
-                </div>
-                <div class = "project-description">
-                    Deepfake Perception Analysis – Understanding Human Response to AI Media Sep 2025 – Present
-                    Supervised by Dr. Sukrit Venkatagiri, Assistant Professor, Swarthmore College
-                    A qualitative research project examining how people perceive and morally evaluate deepfake technology.
-                </div>
-                <div class = "project-visuals">
-                    <img src="assets/img/selfie.png" alt="Portrait of Me" />
-                </div>
-            </div>
-
-            <div class = "experience-block">
-                <div class = "experience-time">
-                    
-                <div>
-                <div class = "experience-location">
-                    
-                <div>
-                <div class = "project-title">
-                    TargetPractice
-                </div>
-                <div class = "project-supervisor">
-
-                </div>
-                <div class = "project-description">
-                    TargetPractice – Scam Prevention System Jun 2025 – Aug 2025
-                    Supervised by Dr. Sukrit Venkatagiri, Assistant Professor, Swarthmore College
-                    An interactive system to train users in scam recognition using multi-agent LLM simulation
-                </div>
-                <div class = "project-visuals">
-                    <img src="assets/img/selfie.png" alt="Portrait of Me" />
-                </div>
-            </div>
-
-            <div class = "experience-block">
-                <div class = "experience-time">
-                    
-                <div>
-                <div class = "experience-location">
-                    
-                <div>
-                <div class = "project-title">
-                    Artificial Intelligence Toolkit (AITK)
-                </div>
-                <div class = "project-supervisor">
-
-                </div>
-                <div class = "project-description">
-                    Artificial Intelligence Toolkit (AITK) – AI Education Tool Supervised by Dr. Lisa Meeden, Professor and NSE Division Chair, Swarthmore College
-                    An accessible toolkit to teach advanced AI concepts through lightweight, reproducible models.
-                </div>
-                <div class = "project-visuals">
-                    <img src="assets/img/selfie.png" alt="Portrait of Me" />
-                </div>
-            </div>
-
         </div>
-        <div class = "internship-header">
-            Internship Experiences
-        <div>
-        <div class = "nternships">
-            <div class = "nternship-block">
-                <div class = "nternship-time">
-                    
-                <div>
-                <div class = "nternship-location">
-                    
-                <div>
-                <div class = "project-title">
-                    Multimodal Learning Algorithm Designer
+
+        <div class="experiences">
+            <!-- Experience 1 -->
+            <div class="experience-block">
+                <div class="left-block">
+                    <div class="experience-time">
+                        Sep 2025 – Present
+                    </div>
+                    <div class="experience-location">
+                        Swarthmore College
+                    </div>
+                    <div class="project-title">
+                        Deepfake Perception Analysis
+                    </div>
+                    <div class="project-supervisor">
+                        Supervised by Dr. Sukrit Venkatagiri
+                    </div>
+                    <div class="project-description">
+                        This project examines how people perceive and morally evaluate deepfake technology, focusing on questions of
+                        consent, authenticity, and impact. I analyze around 85,000 words of interview data using Atlas.ti, help design
+                        a codebook that focuses on consent, authenticity, impact, and education. I also work on translating coded themes into
+                        conceptual maps that connect public attitudes to potential design and policy directions for AI-generated media.
+                    </div>
                 </div>
-                <div class = "project-description">
-                    AI Research Institute at GRG Banking Co., Ltd., Guangzhou, China
-                    Multimodal Learning Algorithm Researcher Aug 2025 – Sept 2025
-                <div class = "project-visuals">
-                    <img src="assets/img/selfie.png" alt="Portrait of Me" />
+                <div class="right-block">
+                    <div class="project-visuals">
+                        <button class="carousel-arrow carousel-arrow-left" aria-label="Previous image">&#10094;</button>
+                        
+                        <div class="image-carousel">
+                            <img src="assets/img/deepfake_perception/deepfake_perception_1.png" alt="atlas.ti screenshot 1" />
+                            <img src="assets/img/deepfake_perception/deepfake_perception_2.png" alt="atlas.ti screenshot 2" />
+                        </div>
+
+                        <button class="carousel-arrow carousel-arrow-right" aria-label="Next image">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="experience-block">
+                <div class="left-block">
+                    <div class="experience-time">
+                        Jun 2025 – Aug 2025
+                    </div>
+                    <div class="experience-location">
+                        Swarthmore College
+                    </div>
+                    <div class="project-title">
+                        TargetPractice
+                    </div>
+                    <div class="project-supervisor">
+                        Supervised by Dr. Sukrit Venkatagiri
+                    </div>
+                    <div class="project-description">
+                        TargetPractice is an interactive system that uses multi-agent LLM simulations to help people recognize and resist
+                        online scams. I implemented the core scammer–target–feedback dialogue framework, designed
+                        role-specific prompts and a rule-based safety layer, and conducted a controlled experiment (N=150) comparing
+                        different learning conditions. Our initial results show measurable gains in scam recognition, self-efficacy, and
+                        response efficacy compared to baseline.
+                    </div>
+                </div>
+                <div class="right-block">
+                    <div class="project-visuals">
+                        <button class="carousel-arrow carousel-arrow-left" aria-label="Previous image">&#10094;</button>
+                        
+                        <div class="image-carousel">
+                            <img src="assets/img/target_practice/TargetPractice_1.png" alt="TargetPractice screenshot 1" />
+                        </div>
+
+                        <button class="carousel-arrow carousel-arrow-right" aria-label="Next image">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="experience-block">
+                <div class="left-block">
+                    <div class="experience-time">
+                        Jun 2024 – Aug 2024
+                    </div>
+                    <div class="experience-location">
+                        Swarthmore College
+                    </div>
+                    <div class="project-title">
+                        Artificial Intelligence Toolkit (AITK)
+                    </div>
+                    <div class="project-supervisor">
+                        Supervised by Dr. Lisa Meeden
+                    </div>
+                    <div class="project-description">
+                        AITK is an educational toolkit that uses small, reproducible models to teach advanced AI concepts in a more
+                        accessible way. I implemented scaled-down LLM and word-embedding models in Jupyter notebooks, designed
+                        step-by-step instructional modules, and built TensorFlow-based visualizations of training dynamics (such as loss
+                        curves and weight evolution). The toolkit has been piloted across multiple institutions, with users reporting
+                        high satisfaction with its clarity and usability.
+                    </div>
+                </div>
+                <div class="right-block">
+                    <div class="project-visuals">
+                        <button class="carousel-arrow carousel-arrow-left" aria-label="Previous image">&#10094;</button>
+                        
+                        <div class="image-carousel">
+                            <img src="assets/img/aitk/AITK_1.png" alt="AITK screenshot 1" />
+                            <img src="assets/img/aitk/AITK_2.png" alt="AITK screenshot 2" />
+                            <img src="assets/img/aitk/AITK_3.png" alt="AITK screenshot 3" />
+                        </div>
+
+                        <button class="carousel-arrow carousel-arrow-right" aria-label="Next image">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Internships -->
+        <div class="internship-header">
+            Internship Experiences
+        </div>
+
+        <div class="internships">
+            <div class="internship-block">
+                <div class="left-block">
+                    <div class="internship-time">
+                        Aug 2025 – Sept 2025
+                    </div>
+                    <div class="internship-location">
+                        AI Research Institute, GRG Banking Co., Ltd.
+                    </div>
+                    <div class="project-title">
+                        Multimodal Learning Algorithm Designer
+                    </div>
+                    <div class="project-description">
+                        At GRG’s AI Research Institute, I worked on multimodal learning methods for video–text retrieval. I surveyed
+                        state-of-the-art architectures (e.g., CLIP4CLIP, UCoFiA, Cap4Video), implemented a Python/PyTorch prototype
+                        combining convolutional backbones with cross-modal attention, and set up a training and evaluation
+                        pipeline on the MSR-VTT dataset using standard retrieval metrics such as Recall@K and median rank.
+                    </div>
+                </div>
+                <div class="right-block">
+                    <div class="project-visuals">
+                        <button class="carousel-arrow carousel-arrow-left" aria-label="Previous image">&#10094;</button>
+                        
+                        <div class="image-carousel">
+                            <img src="assets/img/grgbanking/grgbanking1.png" alt="grgbanking screenshot 1" />
+                            <img src="assets/img/grgbanking/grgbanking2.png" alt="grgbanking screenshot 2" />
+                        </div>
+
+                        <button class="carousel-arrow carousel-arrow-right" aria-label="Next image">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start-ups -->
+        <div class="start-ups-header">
+            Start-up Experiences
+        </div>
+
+        <div class="start-ups">
+            <div class="start-up-block">
+                <div class="left-block">
+                    <div class="start-up-time">
+                        Sept 2023 – Present
+                    </div>
+                    <div class="start-up-location">
+                        Nodo Lab
+                    </div>
+                    <div class="start-up-title">
+                        Co-founder &amp; Co-president
+                    </div>
+                    <div class="project-description">
+                        Nodo Lab is a start-up focused on international trade and anti-odor consumer products. I negotiated with 
+                        manufacturers and patent holders and directed digital marketing campaigns across platforms like TikTok and Rednote. Our work has reached
+                        roughly 3,000 monthly sales and given me hands-on experience of technology, product design, and global markets.
+                    </div>
+                </div>
+                <div class="right-block">
+                    <div class="project-visuals">
+                        <button class="carousel-arrow carousel-arrow-left" aria-label="Previous image">&#10094;</button>
+                        
+                        <div class="image-carousel">
+                            <img src="assets/img/nodelab/nodo_lab1.jpg" alt="nodo lab screenshot 1" />
+                            <img src="assets/img/nodelab/nodo_lab2.png" alt="nodo lab screenshot 2" />
+                        </div>
+
+                        <button class="carousel-arrow carousel-arrow-right" aria-label="Next image">&#10095;</button>
+                    </div>
                 </div>
             </div>
         </div>
