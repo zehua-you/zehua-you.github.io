@@ -74,7 +74,7 @@ body {
    ======================================== */
 
 .experiences-section {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 3rem auto 4rem;
   padding: 0 2rem;
 }
@@ -117,10 +117,11 @@ body {
   border-radius: 1rem;
   border: 1px solid #e5e7eb;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-  padding: 1.8rem 2rem;
+  padding: 2.1rem 2.4rem;   /* more padding = bigger card */
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 2.2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); 
+  /* ⬆ right side (image) now gets more space */
+  gap: 2.4rem;
   align-items: center;
 }
 
@@ -201,19 +202,19 @@ body {
 .project-visuals {
   position: relative;
   width: 100%;
-  max-width: 430px;
-  margin: 0 auto;
+  max-width: 500px;       /* ⬅ remove cap so it can fill the column */
+  margin: 0;
   z-index: 10;
 }
 
 .image-carousel {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  border-radius: 0.75rem;
+  aspect-ratio: 16 / 10;   /* ⬅ taller + more substantial */
+  border-radius: 0.9rem;
   overflow: hidden;
   background: #f5efe2;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
