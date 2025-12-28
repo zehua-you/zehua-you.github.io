@@ -202,7 +202,7 @@ body {
 .project-visuals {
   position: relative;
   width: 100%;
-  max-width: 500px;       /* ⬅ remove cap so it can fill the column */
+  max-width: 590px;       /* ⬅ remove cap so it can fill the column */
   margin: 0;
   z-index: 10;
 }

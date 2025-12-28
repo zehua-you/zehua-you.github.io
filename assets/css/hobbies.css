@@ -1,0 +1,212 @@
+/* IMPORT VARIABLES FROM HOME/PUBLICATIONS */
+:root {
+  --navy: #14213d;
+  --navy-soft: #1f2937;
+  --orange: #f97316;
+  --bg: #f5f6fa;
+  --text-main: #111827;
+  --text-muted: #4b5563;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: var(--text-main);
+  line-height: 1.7; /* consistent across pages */
+}
+
+/* NAVIGATION BAR (IDENTICAL TO OTHER PAGES) */
+.navigation-bar {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--orange);
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ===================== */
+/*      HOBBIES PAGE     */
+/* ===================== */
+
+.main-content-wrapper {
+  max-width: 900px;           /* match publications page width */
+  margin: 3rem auto 4rem;
+  padding: 0 2rem;
+}
+
+/* Header block */
+.intro-to-hobbies-block {
+  margin-bottom: 1.8rem;
+}
+
+.hobbies-title {
+  font-family: "Georgia", serif;
+  font-size: 2rem;            /* match publications-header */
+  color: var(--navy);
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e5e7eb; /* underline for consistency */
+}
+
+.intro-to-hobbies {
+  font-size: 1.05rem;         /* similar “intro” size across pages */
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 75ch;
+}
+
+/* Minimalist “publication-like” blocks */
+.music-hobbies-block,
+.reading-hobbies-block {
+  padding: 1.5rem 1.8rem;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.music-hobbies-block {
+  margin-bottom: 1.8rem;
+}
+
+.reading-hobbies-block {
+  margin-bottom: 1.8rem;
+}
+
+/* Section titles */
+.music-hobbies-title,
+.reading-hobbies-title {
+  font-family: "Georgia", serif;
+  font-size: 1.45rem;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+
+/* Body text consistent with publications “right-block” */
+.music-hobbies-description,
+.reading-hobbies-description {
+  font-size: 0.98rem;     /* consistent body size */
+  line-height: 1.8;
+  color: var(--text-muted);
+  max-width: 85ch;
+}
+
+/* Keep paragraphs readable even with line breaks in HTML */
+.music-hobbies-description,
+.reading-hobbies-description {
+  white-space: normal;
+}
+
+/* Subtle italic titles: italic only, inherit color */
+.work-title {
+  font-style: italic;
+  color: var(--text-muted);
+  opacity: 0.88;
+  font-weight: 400;
+}
+
+
+
+/* Optional: keep emphasized titles from looking “too loud” */
+.music-hobbies-description .work-title,
+.reading-hobbies-description .work-title {
+  font-weight: 400;
+}
+
+/* ===================== */
+/*        VISUALS        */
+/* ===================== */
+
+.hobbies-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+  margin-top: 0.2rem;
+}
+
+.visual-block {
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 18px 40px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.visual-block img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.visual-block figcaption {
+  padding: 0.9rem 1rem 1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ===================== */
+/*       RESPONSIVE      */
+/* ===================== */
+
+@media (max-width: 850px) {
+  .hobbies-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-block img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content-wrapper {
+    padding: 0 1.2rem;
+  }
+
+  .music-hobbies-block,
+  .reading-hobbies-block {
+    padding: 1.4rem 1.3rem;
+  }
+}
